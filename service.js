@@ -2,10 +2,10 @@ const WORKING_HOURS_START = 9;
 const WORKING_HOURS_END = 17;
 
 /**
- * Check if a date obj falls on a weekend
+ * Check if a date obj falls on a weekend.
  *
  * @param {Date} date - The input date obj
- * @returns {boolean} - Whether it is a weekend.
+ * @returns {boolean} - Whether it is a weekend
  */
 function isWeekend(date) {
   const day = date.getDay()
@@ -13,10 +13,10 @@ function isWeekend(date) {
 }
 
 /**
- * Move a date obj to next working day
+ * Move a date obj to next working day.
  *
  * @param {Date} date - The input date obj
- * @returns {void} - This function does not return a value.
+ * @returns {void} - This function does not return a value
  */
 function moveToNextWorkingDay(date) {
   //
@@ -28,10 +28,10 @@ function moveToNextWorkingDay(date) {
 }
 
 /**
- * Convert a Date obj to ISO string in local timezone
+ * Convert a Date obj to ISO string in local timezone.
  *
  * @param {Date} date - The input date obj
- * @returns {string} - ISO string in local timezone.
+ * @returns {string} - ISO string in local timezone
  */
 function formatDateToISO(date) {
   const year = date.getFullYear();
@@ -45,22 +45,24 @@ function formatDateToISO(date) {
 }
 
 /**
- * Check if a date string can be converted to a valid Date obj
+ * Check if a date string can be converted to a valid Date obj.
  *
  * @param {string} date - The input date string
- * @returns {boolean} - Whether input string can be cast into Date Obj.
+ * @returns {boolean} - Whether input string can be cast into Date Obj
  */
 function isDate(date) {
   return (new Date(date) !== "Invalid Date") && !isNaN(new Date(date));
 }
 
 /**
- * Calculate the due date based on submitted time and turn around time
+ * Calculate the due date based on submitted date/time and turn around time.
+ * The calculated due date is with minute accuracy for turn around time.
+ * TODO add caching.
+ * TODO update accuracy to seconds level.
  *
- * @param {string} submittedDateTime - The submitted date string
+ * @param {string} submittedDateTime - The submitted date time string
  * @param {number} turnAroundTime - The turn around time in hours
- * @returns {string} - Due date in local timezone.
- * TODO add caching
+ * @returns {string} - Due date in local timezone
  */
 function calculateDueDate(submittedDateTime, turnAroundTime) {
   // validate submittedDateTime
