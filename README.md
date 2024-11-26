@@ -2,25 +2,30 @@
 ## Documentation of calculateDueDate
 Please refer to ./out/services.js.html
 
-## Installation
-use
+## Available Scripts
+
+In the project directory, you can run:
+### Installation
 ```shell
 npm install
 ```
 
-## Run service locally
-use
+### Run service locally
 ```shell
 npm start
 ```
 
-## Run Tests
-use
+### Run Tests
 ```shell
 npm test
 ```
 
-## Example payload to call /calculate-due-date/
+## Make API call
+```shell
+npm start
+```
+Then call  [http://localhost:3000/calculate-due-date/ ](http://localhost:3000/calculate-due-date/)\
+**Example payload**\
 {
     "message": {
     "submittedDateTime" : "2024-11-25T09:00:00",
