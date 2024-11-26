@@ -1,6 +1,7 @@
 # Due Date Calculator
 ## Documentation of calculateDueDate
-Please refer to ./out/services.js.html
+Please refer to ./out/services.js.html for documentation.\
+And please refer to ./service.js for function definition
 
 ## Available Scripts
 
